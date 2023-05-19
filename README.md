@@ -6,9 +6,6 @@
 This web application can be useful for front desk person who have to manually record the datas of clients , visitors, delivery persons etc... currently in contact with their respected workplace.
 If they have to change the records manually it is hard to search and modify it.So this application can be useful to solve the problem.
 
-
-
-
 ## PROGRAMMING LANGUAGES
 
 **UI:** 
@@ -17,6 +14,7 @@ If they have to change the records manually it is hard to search and modify it.S
 - CSS
 - Bootstrap
 - JS
+
 **SERVER:** 
 
 - JAVA
@@ -24,17 +22,14 @@ If they have to change the records manually it is hard to search and modify it.S
 - My SQL
 - Servlets
 
-## TECH STACK:
+## SOFTWARE REQUIREMENTS:
 
 - Eclipse IDE
 - My SQL Workbench
+
+## TECH STACK:
 - Tomcat Apache version 9.0
 - My SQL and Tomcat Jar Files
-
-
-
-
-
 
 ## FEATURES:
 
