@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Front Desk Entry Management</title>
+<link
+	href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
+	rel="stylesheet">
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+	integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+	crossorigin="anonymous">
+<script src="js/validation.js"></script>
+<style>
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+	background-color: #333;
+	color: #fff;
+	text-align: center;
+	padding: 19px 45px;
+	animation: background-color 8s infinite;
+}
+
+.sidebar {
+	height: 100%;
+	width: 200px;
+	position: fixed;
+	top: 60px;
+	left: 0;
+	background-color: #111;
+	color: #fff;
+	padding-top: 20px;
+	animation: background-color 8s infinite;
+}
+
+@
+keyframes background-color { 0% {
+	background-color: #4CAF99;
+}
+
+25
+%
+{
+background-color
+:
+lightgrey;
+}
+50
+%
+{
+background-color
+:
+grey;
+}
+100
+%
+{
+background-color
+:
+black;
+}
+}
+.sidebar ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.sidebar li {
+	padding: 10px;
+	text-align: center;
+}
+
+.sidebar li a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.sidebar li a:hover {
+	background-color: #444;
+}
+
+.content {
+	margin-left: 190px;
+	padding: 18px;
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+th, td {
+	text-align: left;
+	padding: 8px;
+}
+
+tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+h2 {
+	background-color: #4CAF35;
+	color: #fff;
+	padding: 10px 405px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 30px;
+}
+
+.green-btn {
+	background-color: #4CAF35;
+	border: none;
+	color: white;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+}
+
+.red-btn {
+	background-color: rgb(193, 0, 0);
+	border: none;
+	color: white;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+}
+
+.blue-btn {
+	background-color: #4CAF99;
+	border: none;
+	color: white;
+	padding: 10px 6px;
+	text-align: center;
+	text-decoration: rgb(201, 201, 201);
+	display: inline-block;
+	font-size: 16px;
+	margin: 1000;
+	padding: 90;
+}
+
+.form-group {
+	position: relative;
+}
+
+.form-group.success input {
+	border-color: #2ecc71;
+}
+
+.form-group.error input {
+	border-color: #e74c3c;
+}
+
+.form-group .error-message {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	font-size: 12px;
+	color: #e74c3c;
+}
+
+#frm {
+	margin-top: 70px;
+}
+</style>
+</head>
+<body class="container-fluid">
+	<div class="header">
+
+		<h1>Front desk Entry</h1>
+
+	</div>
+	<div class="sidebar">
+		<ul>
+			<li><a href='home.html'>Home</a></li>
+			<li><a href="showall">Show all</a></li>
+			<li><a href="totalrecords">Daily Records</a></li>
+
+
+		</ul>
+	</div>
+	<div class="content">
+		<table>
+
+			<form action="registr" method="post" class="form card" id="frm">
+				<h2 class="bg-danger text-white card-header">RegistrationForm</h2>
+				<table class="table table-hover">
+					<tr>
+						<td><label for="userName">Name</label></td>
+						<td class="form-group"><input type="text" name="userName"
+							id="userName" required> <span class="error-message"></span>
+						</td>
+					</tr>
+
+					<tr>
+						<td><label for="purpose">Purpose</label></td>
+						<td><input type="text" name="purpose" id="purpose" required
+							pattern="[A-Za-z]{2-30}"> <span class="error-message"></span></td>
+					</tr>
+					<tr>
+						<td><label for="meetingperson">Meetingperson</label></td>
+						<td><input type="text" name="meetingperson"
+							id="meetingperson" required pattern="[A-Za-z]{2-30}"> <span
+							class="error-message"></span></td>
+					</tr>
+					<tr>
+						<td><label>Gender</label></td>
+						<td><input type="radio" name="gender" id="male" value="male">
+							<label for="male">Male</label>&nbsp; <input type="radio"
+							name="gender" id="female" value="female"> <label
+							for="female">Female</label>&nbsp; <input type="radio"
+							name="gender" id="others" value="others"> <label
+							for="others">Others</label> <span class="error-message"></span></td>
+					</tr>
+					<tr>
+						<td><label for="mobile">Mobile</label></td>
+						<td><input type="tel" name="mobile" id="mobile" required
+							pattern="[0-9]{10}"></td>
+					</tr>
+					<tr>
+						<td><label for="city">City</label></td>
+						<td><select name="city" id="city">
+								<option value="">&nbsp;</option>
+								<option value="chennai">Chennai</option>
+								<option value="Bangalore">Bangalore</option>
+								<option value="pune">Pune</option>
+								<option value="Mumbai">Mumbai</option>
+								<option value="Delhi">Delhi</option>
+								<option value="Hydrabad">Hydrabad</option>
+								<option value="kolkata">Kolkata</option>
+								<option value="lucknow">Lucknow</option>
+								<option value="Jaipur">Jaipur</option>
+								<option value="others">Others</option>
+						</select></td>
+					</tr>
+					<tr>
+						<td><label for="date">Date</label></td>
+						<td><input type="date" name="date" id="date" required></td>
+					</tr>
+					<tr>
+						<td>Intime</td>
+						<td><input type="time" name="intime" required></td>
+					</tr>
+					<tr>
+						<td>Outtime</td>
+						<td><input type="time" name="outtime" required></td>
+					</tr>
+					<tr>
+						<td><label for="email">Email</label></td>
+						<td><input type="email" name="email" id="email" required
+							pattern="[A-Za-z]{10-15}"></td>
+					</tr>
+
+
+					<tr class="card-footer">
+						<td><button type="reset" class="red-btn">cancel</button></td>
+						<td><button type="submit" class="green-btn">Register</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<button class="blue-btn">
+								<a href="showdata">Show Users</a>
+							</button></td>
+
+					</tr>
+
+
+					</form>
+				</table>
+				</div>
+</body>
+</html>
