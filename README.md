@@ -3,9 +3,8 @@
 
 ## DESCRIPTION:
 
-This web application can be useful for front desk person who have to manually record the datas of clients , visitors, delivery persons etc... currently in contact with their respected workplace.
-If they have to change the records manually it is hard to search and modify it.So this application can be useful to solve the problem.
-
+A web application designed to streamline the process of recording, managing data related to customers, clients, visitors, shareholders, delivery persons, and others who are in contact with the workplace.
+The application addresses the challenges of manual record-keeping, making it easier to search and modify records.
 ## PROGRAMMING LANGUAGES
 
 **UI:** 
